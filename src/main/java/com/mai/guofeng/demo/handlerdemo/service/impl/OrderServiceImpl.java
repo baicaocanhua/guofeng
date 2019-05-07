@@ -26,4 +26,9 @@ public class OrderServiceImpl implements IOrderService {
         return null;
     }
 
+    @Override
+    public String sayHandler() {
+        return null;
+    }
+
 }

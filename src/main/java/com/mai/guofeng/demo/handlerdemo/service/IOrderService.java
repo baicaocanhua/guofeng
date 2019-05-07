@@ -18,4 +18,6 @@ public interface IOrderService {
      */
     String handle(OrderDTO dto);
 
+    String sayHandler();
+
 }

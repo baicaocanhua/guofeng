@@ -19,10 +19,19 @@ public class OrderServiceV2Impl implements IOrderService {
     @Autowired
     private HandlerContext handlerContext;
 
+    @Autowired
+    MaiServiceImpl maiService;
+
     @Override
     public String handle(OrderDTO dto) {
         AbstractHandler handler = handlerContext.getInstance1(dto.getType());
         return handler.handle(dto);
+    }
+
+    @Override
+    public String sayHandler() {
+        maiService.say();
+        return "OrderServiceV2Impl";
     }
 
 }
